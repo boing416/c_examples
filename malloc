@@ -1,0 +1,13 @@
+#include<stdio.h>
+#include<stdlib.h>
+#define SomeType double
+void main()
+{
+    unsigned int ArraySize;
+    scanf("%u",&ArraySize);
+    SomeType *t=(SomeType*)malloc(sizeof(SomeType)*ArraySize);
+    /*
+        do something
+    */
+    free(t);
+}
