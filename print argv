@@ -1,0 +1,25 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mnurkass <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/03/29 09:16:14 by mnurkass          #+#    #+#             */
+/*   Updated: 2019/03/29 09:54:56 by mnurkass         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include<stdio.h>
+
+int main	(int argc, char *argv[])
+{
+		int i;
+	char thisChar;
+	for (i = 1; i < argc; i++) { // argv[0] may be the file name (no guarantee, see Peter M's comment)
+		thisChar = argv[i][0]; // If the parameter is "abc", thisChar = 'a'
+		printf("%c\tAscii: %d\n", thisChar, thisChar);
+	}
+	
+	return (0);
+}	
