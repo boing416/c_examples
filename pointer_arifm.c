@@ -42,6 +42,21 @@ int		main(void)
 	ft_putnbr(*(ptr + 1));
 	ft_putchar('\n');
 	
+	// char a;
+	// char b;
+	// char *ptr;
+
+	// a = '3';
+	// b = 'o';
+	// ptr = &b;
+	// ft_putaddr(&b);
+	// ft_putchar('\n');
+	// ft_putaddr(ptr + 1);
+	// ft_putchar('\n');
+	// ft_putaddr(ptr + 2);
+	// ft_putchar('\n');
+	// ft_putnbr(*(ptr + 1));
+	// ft_putchar('\n');
 
 	
 	return 0;
