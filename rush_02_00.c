@@ -6,7 +6,7 @@
 /*   By: mnurkass <mnurkass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/30 10:57:54 by mnurkass          #+#    #+#             */
-/*   Updated: 2019/03/30 11:57:19 by mnurkass         ###   ########.fr       */
+/*   Updated: 2019/03/30 12:01:35 by mnurkass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,24 +17,22 @@ void putchar(char c)
     write(1,&c,1);
 }
 
-// void writeRow(char first, char second)
-// {
-//     if(now_col == 1 || now_col == col)
-//       {                 
-//         putchar(first);
-//       }                    
-//       else
-//       {
-//          putchar(second);
-//       }          
-// }
+void writeRow(int now_col, int col, char first, char second)
+{
+    if(now_col == 1 || now_col == col)
+    {                 
+       putchar(first);
+    }                    
+    else
+    {
+       putchar(second);
+    }          
+}
 
 int rush(int x, int y)
 {
-
     int now_row = 1;
     int now_col = 1;
-
     int row = y;
     int col = x;
 
@@ -45,47 +43,20 @@ int rush(int x, int y)
             
             if(now_row == 1)
             {
-                if(now_col == 1 || now_col == col)
-                {
-                    putchar('A');
-                }                    
-                else
-                {
-                    putchar('B');
-                }
+                writeRow(now_col,col,'A','B');
             }
             else if(now_row == row)
             {
-                if(now_col == 1 || now_col == col)
-                {
-                    putchar('C');
-                }                    
-                else
-                {
-                    putchar('B');
-                }
+                writeRow(now_col,col,'C','B');
             }
             else
             {
-                if(now_col == 1 || now_col == col)
-                {
-                    putchar('B');
-                }                    
-                else
-                {
-                    putchar(' ');
-                }
+                writeRow(now_col,col,'B',' ');
             }
-            
-            
-            
-            
             now_col++;
 
         }
         putchar('\n');
-        
-
         now_row++;
     }
 
