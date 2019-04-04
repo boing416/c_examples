@@ -1,0 +1,66 @@
+#include <stdlib.h>
+
+int	get_str_count(int argc, char **argv)
+{
+	int i;
+	int count;
+	int k;
+
+	i = 1;
+	k = 0;
+	count = 0;
+	while (i < argc)
+	{
+		k = 0;
+		while (argv[i][k] != '\0')
+		{
+			count++;
+			k++;
+		}
+		i++;
+	}
+	return (count);
+}
+
+char	*result(int *par, int argc, char **argv)
+{
+	char *c;
+
+	c = malloc(sizeof(char) * (get_str_count(argc, argv) + (argc)));
+		while(par[0] < argc)
+		{
+			par[2] = 0;
+			while(argv[pqr[0]][par[2]] != '\0')
+			{
+				c[par[3]] = argv[par[0]][par[2]];
+				par[2]++;
+				par[3]++;
+			}
+			c[par[3]] = '\n';
+			par[3]++;
+			par[0]++;
+		}
+		c[par[3]] = '\0';
+	return (c);
+}
+
+char	*ft_concat_params(int argc, char **argv)
+{
+	int i; //0
+	int count; //1
+	int k; //2
+	int j; //3
+	char *c;
+	int par[4];
+
+	if(argc <= 1)
+		return ("\0");
+	par[0] = 1;
+	par[2] = 0;
+	par[3] = 0;
+	par[1] = 0;
+
+	if(argc > 1)
+		c = result(par, argc, argv);
+	return (c);
+}
