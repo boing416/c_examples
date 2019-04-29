@@ -1,0 +1,3 @@
+gcc -c ft_putchar.c
+ar rc libstr.a ft_putchar.o ft_putstr.o
+gcc main.c -L. -lstr
