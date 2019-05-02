@@ -1,0 +1,7 @@
+gcc -o eval_expr -Wall -Wextra -Werror main.c eval.c calc.c lib/*.c -g
+lldb eval_expr
+run params
+gui
+s  - next stop
+DEBUG ITERM
+breakpoint set --file foo.c --line 12 
